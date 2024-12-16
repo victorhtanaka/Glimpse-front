@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@font-face {
+  font-family: Volvo;
+
+  src: url("./assets/fonts/VolvoNovum-Regular.otf");
+}
+
+@import "~@angular/material/theming";
+
+$custom-typography: mat-typography-config(
+  $font-family: Volvo,
+);
+
+@include mat-core($custom-typography);
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  font-family: Volvo, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.green-snackbar {
+  background: #396976;
+  color: white;
+}
+
+.red-snackbar {
+  background: #bf2012;
+  color: white;
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  opacity: 0 !important; /*click effect color change*/
+  background-color: #396976 !important;  }
+
+  .mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #396976 !important; /*inner circle color change*/  }
+
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #396976 !important; /*outer ring color change*/  }
+
+
+  *::-webkit-scrollbar {
+    width: 5px;
+    margin-left: 2px;
+  }
+
+
+  *::-webkit-scrollbar-thumb {
+    height: 10px;
+    background-color: #A7A8A9;
+
+  }
+  .mat-drawer-inner-container{
+    overflow: visible!important;
+  }

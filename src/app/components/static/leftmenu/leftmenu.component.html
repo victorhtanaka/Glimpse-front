@@ -1,0 +1,32 @@
+<mat-nav-list>
+  <img
+    class="volvo-logo"
+    src="assets/images/Volvo-Spread-Word-Mark-Black.svg"
+  />
+</mat-nav-list>
+<mat-nav-list *ngIf="!shouldHideMenu('Conciliation')">
+  <a mat-list-item routerLink="/">
+    <mat-icon class="material-icons example-tab-icon"
+      >playlist_add_check</mat-icon
+    >Conciliação Bancária</a
+  >
+</mat-nav-list>
+<mat-nav-list *ngIf="!shouldHideMenu('CashFlow')">
+  <a mat-list-item routerLink="/cashflow">
+    <mat-icon class="material-icons example-tab-icon">transform</mat-icon>Fluxo
+    de Caixa</a
+  >
+</mat-nav-list>
+<mat-nav-list *ngIf="!shouldHideMenu('Report')">
+  <a mat-list-item routerLink="/reports">
+    <mat-icon class="material-icons example-tab-icon">timeline</mat-icon
+    >Relatórios</a
+  >
+</mat-nav-list>
+<mat-nav-list *ngIf="!shouldHideMenu('Management')">
+  <a mat-list-item routerLink="/management">
+    <mat-icon class="material-icons example-tab-icon">settings</mat-icon
+    >Gerenciar</a
+  >
+</mat-nav-list>
+

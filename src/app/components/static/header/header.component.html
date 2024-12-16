@@ -1,0 +1,32 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button *ngIf="this.isLoggedIn()" mat-icon-button (click)="toggleSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>App Name</span>
+  <span class="filler"></span>
+  <div mat-icon-button class="user-name" *ngIf="this.isLoggedIn()">
+    {{ this.getMsalUserName() | async }}
+  </div>
+  <img
+    class="header-logo"
+    *ngIf="!this.isLoggedIn()"
+    src="assets/images/Volvo-Spread-Word-Mark-White.svg"
+  />
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    *ngIf="this.isLoggedIn() && (this.hasProfilePicture() | async)"
+  >
+    <img mat-card-avatar [src]="this.getProfilePicture() | async" />
+  </button>
+  <mat-menu #menu="matMenu">
+    <button *ngIf="this.isLoggedIn()" mat-menu-item (click)="this.logOut()">
+      <mat-icon>logout</mat-icon>
+      <span>Sair</span>
+    </button>
+    <button *ngIf="!this.isLoggedIn()" mat-menu-item (click)="this.logIn()">
+      <mat-icon>login</mat-icon>
+      <span>Entrar</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
