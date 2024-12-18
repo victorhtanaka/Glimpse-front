@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { MsalUserService } from 'src/app/services/msaluser.service';
 import { SidenavService } from 'src/app/services/sidenav.service';
@@ -13,7 +14,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   constructor(
     private sideNav: SidenavService,
     private authService: AuthService,
-    private msalUserService: MsalUserService,
+    private msalUserService: MsalUserService
   ) { }
 
   ngAfterViewInit() {

@@ -15,6 +15,8 @@ import { MSALInstanceFactory, MSALInterceptorConfigFactory, MSALGuardConfigFacto
 import { LoginComponent } from './components/views/login/login.component';
 import { UnauthorizedComponent } from './components/views/unauthorized/unauthorized.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProjectComponent } from './components/views/project/project.component';
+import { BodyWithMenuComponent } from './components/static/body-with-menu/body-with-menu.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     LeftmenuComponent,
     LoginComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    ProjectComponent,
+    BodyWithMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'VolvoWebTemplate'`, () => {
+  it(`should have as title 'GlimpseWebTemplate'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('VolvoWebTemplate');
+    expect(app.title).toEqual('GlimpseWebTemplate');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('VolvoWebTemplate app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('GlimpseWebTemplate app is running!');
   });
 });

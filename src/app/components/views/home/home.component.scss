@@ -1,0 +1,54 @@
+
+.about {
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+.card { 
+    width: 20%;
+    align-items: center;
+    padding: 3%;
+    border-radius: 40px;
+    text-align: center;
+}
+.card h4 {
+    font-family: "Fixture-Expanded-SemiBold";
+}
+
+.about {
+    background-color: #fefefe;
+    opacity: 1;
+    background-image:  linear-gradient(#f8f8f8 1.8px, transparent 1.8px), linear-gradient(to right, #f8f8f8 1.8px, #fefefe 1.8px);
+    background-size: 36px 36px;
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+.gradient {
+    background: rgb(150,50,199);
+    background: -moz-linear-gradient(0deg, rgba(150,50,199,1) 7%, rgba(90,2,133,1) 25%, rgba(67,3,93,1) 36%, rgba(50,0,74,1) 48%, rgba(38,1,56,1) 60%, rgba(27,1,41,1) 70%, rgba(9,0,17,1) 82%);
+    background: -webkit-linear-gradient(0deg, rgba(150,50,199,1) 7%, rgba(90,2,133,1) 25%, rgba(67,3,93,1) 36%, rgba(50,0,74,1) 48%, rgba(38,1,56,1) 60%, rgba(27,1,41,1) 70%, rgba(9,0,17,1) 82%);
+    background: linear-gradient(0deg, rgba(150,50,199,1) 7%, rgba(90,2,133,1) 25%, rgba(67,3,93,1) 36%, rgba(50,0,74,1) 48%, rgba(38,1,56,1) 60%, rgba(27,1,41,1) 70%, rgba(9,0,17,1) 82%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9632c7",endColorstr="#090011",GradientType=1);
+}
+.ul-navbar {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.212);
+}
+.display-2 {
+    background: #FFFFFF;
+    background: radial-gradient(ellipse farthest-corner at center center, #FFFFFF 30%, #CACACA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

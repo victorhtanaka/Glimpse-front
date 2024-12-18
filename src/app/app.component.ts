@@ -16,13 +16,13 @@ import { MsalUserService } from 'src/app/services/msaluser.service';
 })
 export class AppComponent implements OnInit, OnDestroy {
   private readonly _destroying$ = new Subject<void>();
-  title = 'VolvoWebTemplate';
+  title = 'GlimpseWebTemplate';
 
   constructor(
     private msalService: MsalService,
     private authService: AuthService,
     private msalUserService: MsalUserService,
-    private router: Router
+    public router: Router
   ) { }
 
   ngOnInit(): void {
