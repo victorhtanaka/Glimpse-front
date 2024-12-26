@@ -1,4 +1,10 @@
 import { Base } from './base.model';
+import { BlobFile } from './blobFile.model';
+import { Board } from './board.model';
+import { Repository } from './repository.model';
+import { Role } from './role.model';
+import { Sprint } from './sprint.model';
+import { User } from './user.model';
 
 export interface Project extends Base {
   responsibleUserId: string;

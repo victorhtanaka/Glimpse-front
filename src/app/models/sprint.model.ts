@@ -1,4 +1,6 @@
 import { Base } from './base.model';
+import { Card } from './card.model';
+import { Project } from './project.model';
 
 export interface Sprint extends Base {
   name: string;
