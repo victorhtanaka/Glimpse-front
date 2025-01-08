@@ -1,16 +1,16 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BaseService } from './base.service';
-import { BlobFile } from '../models/blobFile.model';
+import { Lane } from '../models/lane.model';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class BlobFileService extends BaseService<BlobFile>{
+export class LaneService extends BaseService<Lane>{
 
   constructor(http: HttpClient) {
-    super(http, `BlobFile`);
+    super(http, `Lane`);
   }
 
   protected override httpOptions = {
