@@ -1,4 +1,5 @@
 import { Base } from './base.model';
+import { Project } from './project.model';
 
 export interface Repository extends Base {
   owner: string;

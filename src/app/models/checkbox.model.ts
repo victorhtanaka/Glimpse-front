@@ -1,4 +1,5 @@
 import { Base } from './base.model';
+import { Card } from './card.model';
 
 export interface Checkbox extends Base {
   name: string;

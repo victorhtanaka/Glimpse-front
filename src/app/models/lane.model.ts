@@ -1,4 +1,6 @@
 import { Base } from './base.model';
+import { Board } from './board.model';
+import { Card } from './card.model';
 
 export interface Lane extends Base {
   name: string;

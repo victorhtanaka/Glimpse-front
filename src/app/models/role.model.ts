@@ -1,4 +1,6 @@
 import { Base } from './base.model';
+import { Project } from './project.model';
+import { User } from './user.model';
 
 export interface Role extends Base {
   name: string;

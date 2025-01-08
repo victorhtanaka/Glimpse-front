@@ -1,4 +1,9 @@
 import { Base } from './base.model';
+import { Checkbox } from './checkbox.model';
+import { Lane } from './lane.model';
+import { Sprint } from './sprint.model';
+import { Tag } from './tag.model';
+import { User } from './user.model';
 
 export interface Card extends Base {
   name: string;

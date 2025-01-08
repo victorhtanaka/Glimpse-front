@@ -7,8 +7,6 @@ import { filter, takeUntil } from 'rxjs/operators';
 import { AuthService } from 'src/app/services/auth.service';
 import { MsalUserService } from 'src/app/services/msaluser.service';
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
