@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Project } from 'src/app/models/project.model';
 import { ProjectService } from 'src/app/services/project.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -9,7 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ProjectComponent implements OnInit {
 
-  
+  projects: Project[];
 
   constructor(
     private userService: UserService
@@ -19,8 +20,8 @@ export class ProjectComponent implements OnInit {
 
   }
 
-  getProjects(id: number): void {
-    this.userService.getById(id).subscribe(res => {
+  getProjects(userId: number): void {
+    this.userService.getById(userId).subscribe(res => {
       return res.projects;
     })
   }

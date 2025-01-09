@@ -7,7 +7,7 @@ import { ProjectComponent } from './components/views/project/project.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'projects', component: ProjectComponent}
+  {path: 'Projects', component: ProjectComponent}
 ];
 
 @NgModule({
