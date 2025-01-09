@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  apiUri: 'http://localhost:5000',
+  apiUri: 'http://localhost:7213',
   cloudInstanceId: 'https://login.microsoftonline.com',
   graphEndPoint: 'https://graph.microsoft.com',
   scopeUri: '',

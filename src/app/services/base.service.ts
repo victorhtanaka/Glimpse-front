@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
@@ -15,8 +15,8 @@ export abstract class BaseService<T> {
             'Access-Control-Allow-Origin': '*',
         }),
     };
-
-    constructor(protected http: HttpClient, protected endpoint: string) { }
+    
+    constructor(protected http: HttpClient, @Inject(String) protected endpoint: string) { }
 
     getAll(): Observable<T[]> {
         return this.http.get<T[]>(`${environment.apiUri}/${this.endpoint}`, this.httpOptions);
