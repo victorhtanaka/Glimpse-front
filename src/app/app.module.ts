@@ -6,7 +6,7 @@ import { AngularMaterialModule } from './modules/angular-material/angular-materi
 import { HeaderComponent } from './components/static/header/header.component';
 import { BodyComponent } from './components/static/body/body.component';
 import { HomeComponent } from './components/views/home/home.component';
-import { LeftmenuComponent } from './components/static/leftmenu/leftmenu.component';
+import { LeftMenuComponent } from './components/static/leftmenu/leftmenu.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SpinnerInterceptor } from './interceptor/spinner.interceptor';
 import { MsalGuard, MsalInterceptor, MsalBroadcastService, MsalService, MSAL_GUARD_CONFIG, MSAL_INSTANCE, MSAL_INTERCEPTOR_CONFIG, MsalRedirectComponent } from '@azure/msal-angular';
@@ -17,6 +17,7 @@ import { UnauthorizedComponent } from './components/views/unauthorized/unauthori
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from './components/views/project/project.component';
 import { BodyWithMenuComponent } from './components/static/body-with-menu/body-with-menu.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,11 @@ import { BodyWithMenuComponent } from './components/static/body-with-menu/body-w
     HeaderComponent,
     BodyComponent,
     HomeComponent,
-    LeftmenuComponent,
+    LeftMenuComponent,
     LoginComponent,
     UnauthorizedComponent,
     ProjectComponent,
-    BodyWithMenuComponent
+    BodyWithMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +38,7 @@ import { BodyWithMenuComponent } from './components/static/body-with-menu/body-w
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatListModule
   ],
   providers: [
     {

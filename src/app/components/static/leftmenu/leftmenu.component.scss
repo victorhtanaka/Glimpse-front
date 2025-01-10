@@ -1,12 +1,39 @@
-.mat-list-item{
+.mat-list-item {
   color: #141414;
+  height: 52px !important;
 }
 
-.volvo-logo{
+.volvo-logo {
   width: "80px" !important;
   background-position: center;
 }
 
 .example-tab-icon {
-  margin-right: 8px;
+  width: 28px;
+  height: 28px;
+  transition: all 0.24s ease-in-out 0s;
+}
+
+.mat-list-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font: 400 16px Poppins;
+  color: #575757;
+}
+
+.mat-list-item:hover {
+  background-color: #e6e6e6;
+}
+
+.closed-menu {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-open-icon {
+  margin: 0 8px;
 }

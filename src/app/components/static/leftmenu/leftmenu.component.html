@@ -1,32 +1,46 @@
-<mat-nav-list>
-  <img
-    class="volvo-logo"
-    src="assets/images/Volvo-Spread-Word-Mark-Black.svg"
-  />
-</mat-nav-list>
-<mat-nav-list *ngIf="!shouldHideMenu('Conciliation')">
-  <a mat-list-item routerLink="/">
-    <mat-icon class="material-icons example-tab-icon"
-      >playlist_add_check</mat-icon
-    >Conciliação Bancária</a
-  >
-</mat-nav-list>
-<mat-nav-list *ngIf="!shouldHideMenu('CashFlow')">
-  <a mat-list-item routerLink="/cashflow">
-    <mat-icon class="material-icons example-tab-icon">transform</mat-icon>Fluxo
-    de Caixa</a
-  >
-</mat-nav-list>
-<mat-nav-list *ngIf="!shouldHideMenu('Report')">
-  <a mat-list-item routerLink="/reports">
-    <mat-icon class="material-icons example-tab-icon">timeline</mat-icon
-    >Relatórios</a
-  >
-</mat-nav-list>
-<mat-nav-list *ngIf="!shouldHideMenu('Management')">
-  <a mat-list-item routerLink="/management">
-    <mat-icon class="material-icons example-tab-icon">settings</mat-icon
-    >Gerenciar</a
-  >
-</mat-nav-list>
+<div *ngIf="!isCollapsed">
+  <mat-nav-list>
 
+    <a mat-list-item style="pointer-events: none;">
+      <img src="assets/images/Volvo-Spread-Word-Mark-Black.svg" style="width: 70%;" class="example-tab-icon menu-open-icon">
+    </a>
+    <a mat-list-item routerLink="/release">
+      <img src="assets/images/Request.svg" class="example-tab-icon menu-open-icon">
+      <div style="width: 4px;"></div>
+      Lançamento
+    </a>
+    <a mat-list-item routerLink="/request-list">
+      <img src="assets/images/Book.svg" class="example-tab-icon menu-open-icon">
+      Solicitações
+      <div style="width: 4px;"></div>
+    </a>
+    <a mat-list-item routerLink="/management" *ngIf="this.adminList.includes(this.currentUser.role?.name!)">
+      <img src="assets/images/Settings.svg" class="example-tab-icon menu-open-icon">
+      <div style="width: 4px;"></div>
+      Gerenciar
+    </a>
+    <a mat-list-item routerLink="/report">
+      <img src="assets/images/Report.svg" class="example-tab-icon menu-open-icon">
+      <div style="width: 4px;"></div>
+      Relatórios
+    </a>
+  </mat-nav-list>
+</div>
+
+<div *ngIf="isCollapsed" class="closed-menu">
+    <a mat-list-item style="pointer-events: none;">
+      <img src="favicon.ico" class="example-tab-icon">
+    </a>
+    <a mat-list-item routerLink="/release">
+      <img src="assets/images/Request.svg" class="example-tab-icon">
+    </a>
+    <a mat-list-item routerLink="/request-list">
+      <img src="assets/images/Book.svg" class="example-tab-icon">
+    </a>
+    <a mat-list-item routerLink="/management">
+      <img src="assets/images/Settings.svg" class="example-tab-icon">
+    </a>
+    <a mat-list-item routerLink="/report">
+      <img src="assets/images/Report.svg" class="example-tab-icon">
+    </a>
+</div>

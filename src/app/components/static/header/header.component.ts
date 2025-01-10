@@ -1,50 +1,46 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { MsalUserService } from 'src/app/services/msaluser.service';
 import { SidenavService } from 'src/app/services/sidenav.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent {
+  isQaEnviroment: boolean = !environment.production;
 
   constructor(
     private sideNav: SidenavService,
     private authService: AuthService,
-    private msalUserService: MsalUserService
-  ) { }
+    private msalUserService: MsalUserService,
+    private router: Router
+  ) {}
 
-  ngAfterViewInit() {
-  }
-
-  ngOnInit() {
-  }
-
-  toggleSidenav(){
-    this.sideNav.toggle();
-  }
+  toggleSidenav() {
+    this.sideNav.toggleCollapse();
+  }  
 
   isLoggedIn(): boolean {
-    if (this.authService.loggedIn) return true;
-    return false;
+    return this.authService.loggedIn;
   }
 
-  logOut(){
-    this.authService.logout();
-  }
-
-  logIn(){
+  logIn() {
     this.authService.updateLoggedInStatus();
+  }
+
+  logOut() {
+    this.authService.logout();
   }
 
   hasProfilePicture() {
     return this.msalUserService.getHasProfilePicture();
   }
 
-  getProfilePicture():any {
+  getProfilePicture(): any {
     return this.msalUserService.getProfilePicture();
   }
 
@@ -52,4 +48,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     return this.msalUserService.getName();
   }
 
+  routeHome() {
+    this.router.navigate(['/']).then(() => {
+      window.location.reload();
+    });
+  }
 }

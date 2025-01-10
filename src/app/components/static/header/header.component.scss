@@ -2,26 +2,48 @@
   flex: 1 1 auto;
 }
 
-mat-toolbar{
-  background-color: #141414;
+mat-toolbar {
+  background-color: #212121;
   color: white;
   position: relative;
+  height: 56px;
   z-index: 999;
 }
 
-.mat-card-avatar{
+.menuButton {
+  height: 40px !important;
+  margin-left: 8px;
+  background: transparent;
+  color: white;
+  border-radius: 20px !important;
+}
+
+.menuButton:hover {
+  background-color: #e1dfdd;
+}
+
+.mat-card-avatar {
   vertical-align: middle;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
 }
 
-.user-name{
+.user-name {
+  font-weight: 400;
   margin-right: 10px;
-  font-size: initial;
-}
-.header-logo{
-  vertical-align: middle;
-  width: 140px;
+  font-size: 15px;
 }
 
+.vertical-sep {
+  width: 1px;
+  background-color: rgb(71, 71, 71);
+  height: 30px;
+  margin: 5px 13px;
+}
+
+.nameAndQa {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
